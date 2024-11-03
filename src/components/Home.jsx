@@ -1,4 +1,8 @@
 'use client'
+import About from '../app/about/page'
+import Works from '../app/myworks/page'
+import Contact from '../app/contact/page'
+
 
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
@@ -45,8 +49,12 @@ export default function Home() {
             {/* Header section */}
             <header className="fixed top-0 left-0 right-0 bg-black p-4 z-10">
                 <div className="max-w-6xl mx-auto flex justify-between items-center">
-                    <div className="bg-[#00D8FF] text-black px-6 py-2 rounded-full flex-grow mr-4">
-                        <h1 className="text-3xl font-extrabold">Joseph Akharume</h1>
+                    {/* BOLD COMMENT: Added logo and name container */}
+                    <div className="flex items-center">
+                        <Image src="/Jlogo.png" alt="Logo" width={50} height={50} className="mr-4" />
+                        <div className="bg-[#4ECDC4] text-black px-6 py-2 rounded-full">
+                            <h1 className="text-xl font-bold">Joseph Akharume</h1>
+                        </div>
                     </div>
                     <div className="flex items-center space-x-4">
                         <button
@@ -121,88 +129,14 @@ export default function Home() {
                         </div>
                     ))}
                 </div>
-                <h2 className={`mt-8 text-3xl font-bold ${darkMode ? 'text-blue-400' : 'text-[#00D8FF]'}`}>Full Stack Developer</h2>
+                <h2 className={`mt-8 text-3xl font-bold ${darkMode ? 'text-blue-400' : 'text-[#AED581]'}`}>Full Stack Developer</h2>
             </section>
 
-            {/* About Section */}
-            <section id="about" className={`py-20 ${darkMode ? 'bg-gray-800' : 'bg-gray-100'}`}>
-                <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-bold mb-8 text-center">About Me</h2>
-                    <div className={`${darkMode ? 'bg-gray-700' : 'bg-white'} p-6 rounded-lg shadow-lg bg-[#7986CB]`} style={{ backgroundColor: '#7986CB' }}>
-                        <p className="mb-4">
-                            I'm a passionate full-stack developer with a keen interest in building scalable web applications. With 5
-                            years of experience in the industry, I've worked on a variety of projects ranging from small business
-                            websites to large-scale enterprise applications.
-                        </p>
-                        <p>
-                            My expertise includes front-end technologies like React and Vue.js, as well as back-end technologies like
-                            Node.js and Python. I'm always eager to learn new technologies and improve my skills.
-                        </p>
-                    </div>
-                </div>
-            </section>
+            {/* <About />
 
-            {/* Works Section */}
-            <section id="my-works" className="py-20">
-                <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-bold mb-8 text-center">My Works</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {[1, 2, 3].map((item) => (
-                            <div key={item} className={`${darkMode ? 'bg-gray-700' : 'bg-white'} p-6 rounded-lg shadow-lg`}>
-                                <h3 className="text-xl font-bold mb-2">Project {item}</h3>
-                                <p className="mb-4">A brief description of the project and the technologies used.</p>
-                                <button className={`${darkMode ? 'bg-blue-600 hover:bg-blue-700' : 'bg-[#00D8FF] hover:bg-[#00C4E8]'} text-white px-4 py-2 rounded transition-colors`}>
-                                    View Project
-                                </button>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+            <Works />
+            <Contact /> */}
 
-            {/* Contact Section */}
-            <section id="contact" className={`py-20 ${darkMode ? 'bg-gray-800' : 'bg-gray-100'}`}>
-                <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-bold mb-8 text-center">Contact Me</h2>
-                    <div className={`${darkMode ? 'bg-gray-700' : 'bg-white'} p-6 rounded-lg shadow-lg`}>
-                        <form className="space-y-4">
-                            <div>
-                                <label htmlFor="name" className="block mb-1">Name</label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    className={`w-full px-3 py-2 border ${darkMode ? 'border-gray-600 bg-gray-800' : 'border-gray-300 bg-white'} rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500`}
-                                    required
-                                />
-                            </div>
-                            <div>
-                                <label htmlFor="email" className="block mb-1">Email</label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    className={`w-full px-3 py-2 border ${darkMode ? 'border-gray-600 bg-gray-800' : 'border-gray-300 bg-white'} rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500`}
-                                    required
-                                />
-                            </div>
-                            <div>
-                                <label htmlFor="message" className="block mb-1">Message</label>
-                                <textarea
-                                    id="message"
-                                    rows={4}
-                                    className={`w-full px-3 py-2 border ${darkMode ? 'border-gray-600 bg-gray-800' : 'border-gray-300 bg-white'} rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500`}
-                                    required
-                                ></textarea>
-                            </div>
-                            <button
-                                type="submit"
-                                className={`${darkMode ? 'bg-blue-600 hover:bg-blue-700' : 'bg-[#00D8FF] hover:bg-[#00C4E8]'} text-white px-6 py-2 rounded transition-colors`}
-                            >
-                                Send Message
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </section>
         </div>
     )
 }

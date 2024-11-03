@@ -1,5 +1,5 @@
 'use client'
-
+import Image from 'next/image'
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -19,9 +19,13 @@ export default function Header() {
     return (
         <header className="fixed top-0 left-0 right-0 bg-black p-4 z-10">
             <div className="max-w-6xl mx-auto flex justify-between items-center">
-                <div className="bg-[#AED581] text-black px-6 py-2 rounded-full">
-                    <h1 className="text-xl font-bold">Joseph Akharume</h1>
+                <div className="flex items-center">
+                    <Image src="/Jlogo.png" alt="Logo" width={50} height={50} className="mr-4" />
+                    <div className="bg-[#4ECDC4] text-black px-6 py-2 rounded-full item-center">
+                        <h1 className="text-xl font-bold">Joseph Akharume</h1>
+                    </div>
                 </div>
+                {/* Menu button: Moved outside of the nested divs for correct positioning */}
                 <button
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                     className="text-[#80EBFF] hover:text-[#00D8FF] transition-colors"
@@ -31,15 +35,12 @@ export default function Header() {
                 </button>
             </div>
             {isMenuOpen && (
-                // Changed: Added w-48 class to set a fixed width and reduce overall size
                 <nav className="fixed top-16 right-4 bg-[#00A3CC] p-4 rounded-lg shadow-lg w-48">
-                    {/* Changed: Removed space-y-2 class to reduce vertical spacing */}
                     <ul>
                         {navItems.map((item) => (
                             <li key={item.name}>
                                 <Link
                                     href={item.path}
-                                    // Changed: Adjusted padding and removed extra spacing
                                     className={`block px-3 py-1 rounded transition-colors ${pathname === item.path
                                             ? 'bg-[#80EBFF] text-black'
                                             : 'hover:bg-[#80EBFF] hover:text-black text-white'

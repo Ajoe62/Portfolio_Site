@@ -27,7 +27,7 @@ export default function Contact() {
         <section className="py-16 pt-24">
             <div className="max-w-4xl mx-auto px-4">
                 <h2 className="text-3xl font-bold mb-8 text-center">Contact Me</h2>
-                <div className="bg-[#00D8FF] text-black p-6 rounded-lg">
+                <div className="bg-[#4ECDC4] text-black p-6 rounded-lg">
                     <form className="space-y-4" onSubmit={handleSubmit}>
                         <div>
                             <label htmlFor="name" className="block mb-1">
