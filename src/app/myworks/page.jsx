@@ -35,7 +35,7 @@ export default function MyWorks() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project) => (
                         // Changed: Updated background color to #4ECDC4 and text color to a darker shade for better contrast
-                        <div key={project.id} className="bg-[#4ECDC4] text-gray-800 p-6 rounded-lg flex flex-col">
+                        <div key={project.id} className="bg-[#F2F2F2] text-gray-800 p-6 rounded-lg flex flex-col">
                             <Image
                                 src={project.image}
                                 alt={project.title}
@@ -50,7 +50,7 @@ export default function MyWorks() {
                                 <div className="flex flex-wrap gap-2">
                                     {project.technologies.map((tech, index) => (
                                         // Changed: Updated technology tag colors to complement the new background
-                                        <span key={index} className="bg-[#45B7D1] text-white px-2 py-1 rounded text-sm">
+                                        <span key={index} className="bg-[#4C7972] text-white px-2 py-1 rounded text-sm">
                                             {tech}
                                         </span>
                                     ))}
@@ -61,7 +61,7 @@ export default function MyWorks() {
                                 href={project.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="bg-[#45B7D1] text-white px-4 py-2 rounded hover:bg-[#3CA2BA] transition-colors text-center"
+                                className="bg-[#FFD181] text-white px-4 py-2 rounded hover:bg-[#E1C7A5] transition-colors text-center"
                             >
                                 View Project
                             </a>

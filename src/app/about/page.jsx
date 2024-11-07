@@ -5,7 +5,7 @@ export default function About() {
             <div className="max-w-5xl mx-auto px-4">
                 <h2 className="text-3xl font-bold mb-8 text-center">About Me</h2>
                 {/* Changed: Updated background color to #4ECDC4, adjusted text color to gray-800 for better contrast, increased max-width to 3xl */}
-                <div className="bg-[#4ECDC4] text-gray-800 p-6 rounded-lg max-w-3xl mx-auto">
+                <div className="bg-[#7BC5C1] text-gray-800 p-6 rounded-lg max-w-5xl mx-auto">
                     <p className="mb-4">
                         I'm a passionate full-stack developer with 4 years of experience in building scalable web applications.
                         My journey in the tech industry has been marked by a diverse range of projects, from small business

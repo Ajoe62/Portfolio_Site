@@ -8,13 +8,13 @@ export default function Footer() {
                         <p className="mt-2">Full Stack Developer</p>
                     </div>
                     <div className="flex space-x-4">
-                        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-[#4ECDC4] hover:text-[#98D8C8] transition-colors">
+                        <a href="https://github.com/Ajoe62" target="_blank" rel="noopener noreferrer" className="text-[#4ECDC4] hover:text-[#98D8C8] transition-colors">
                             GitHub
                         </a>
-                        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="text-[#4ECDC4] hover:text-[#98D8C8] transition-colors">
+                        <a href="https://linkedin.com/in/akharumejoseph" target="_blank" rel="noopener noreferrer" className="text-[#4ECDC4] hover:text-[#98D8C8] transition-colors">
                             LinkedIn
                         </a>
-                        <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-[#4ECDC4] hover:text-[#98D8C8] transition-colors">
+                        <a href="https://twitter.com/web-with-joe" target="_blank" rel="noopener noreferrer" className="text-[#4ECDC4] hover:text-[#98D8C8] transition-colors">
                             Twitter
                         </a>
                     </div>

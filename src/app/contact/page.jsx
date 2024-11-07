@@ -27,7 +27,7 @@ export default function Contact() {
         <section className="py-16 pt-24">
             <div className="max-w-4xl mx-auto px-4">
                 <h2 className="text-3xl font-bold mb-8 text-center">Contact Me</h2>
-                <div className="bg-[#4ECDC4] text-black p-6 rounded-lg">
+                <div className="bg-[#7BC5C1] text-black p-6 rounded-lg">
                     <form className="space-y-4" onSubmit={handleSubmit}>
                         <div>
                             <label htmlFor="name" className="block mb-1">
@@ -73,7 +73,7 @@ export default function Contact() {
                         </div>
                         <button
                             type="submit"
-                            className="bg-[#00A3CC] text-white px-6 py-2 rounded hover:bg-[#80EBFF] transition-colors"
+                            className="bg-[#FFD181] text-white px-6 py-2 rounded hover:bg-[#E1C7A5] transition-colors"
                         >
                             Send Message
                         </button>
