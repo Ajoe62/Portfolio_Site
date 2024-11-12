@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Moon, Sun, Menu, X } from 'lucide-react'
 
-const skills = ['React', 'JavaScript', 'Node.js', 'CSS', 'HTML', 'Git', 'Python', 'SQL']
+const skills = ['React', 'Nextjs', 'Node.js', 'CSS', 'Mongodb', 'Git', 'Python', 'SQL']
 const skillColors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#FFA07A', '#98D8C8', '#F06292', '#AED581', '#7986CB']
 
 // BOLD UPDATE: Added navigation items with hash links for smooth scrolling
@@ -132,13 +132,13 @@ export default function Home() {
                     Meet your Favourite Fullstack Developer
                 </h1>
                 <div className="relative w-full max-w-[300px] h-[300px] md:max-w-[500px] md:h-[500px] mx-auto">
-                    <div className="absolute inset-0 w-[180px] h-[180px] md:w-[180px] md:h-[180px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full border-8 border-[#4ECDC4] z-20"></div>
+                    <div className="absolute inset-0 w-[180px] h-[180px] md:w-[180px] md:h-[180px] top-1/2 left-[55%] transform -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-[#4ECDC4] z-20"></div>
                     <Image
                         src="/joe.png"
                         alt="Joseph Akharume"
                         width={200}
                         height={200}
-                        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full object-cover z-10 w-[120px] h-[120px] md:w-[200px] md:h-[200px]"
+                        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full object-cover z-10 w-[120px] h-[120px] md:w-[200px] md:h-[200px] md:top-[45%] md:left-[55%]"
                     />
                     {skills.map((skill, index) => (
                         <div
@@ -149,19 +149,21 @@ export default function Home() {
                                 left: '50%',
                                 transform: `
                                     rotate(${rotation + index * (360 / skills.length)}deg)
-                                    translateY(-138px)
+                                    translateY(-150px)
                                     rotate(-${rotation + index * (360 / skills.length)}deg)
                                 `,
                                 '@media (minWidth: 768px)': {
                                     transform: `
                                         rotate(${rotation + index * (360 / skills.length)}deg)
-                                        translateY(-230px)
+                                        translateY(-250px)
                                         rotate(-${rotation + index * (360 / skills.length)}deg)
-                                    `
+                                    `,
+                                    fontSize: '1.25rem',
+                                    padding: '8px 16px',
                                 },
                                 background: skillColors[index % skillColors.length],
                                 padding: '4px 8px',
-                                borderRadius: '4px',
+                                borderRadius: '2px',
                                 transition: 'transform 0.1s linear',
                             }}
                         >
