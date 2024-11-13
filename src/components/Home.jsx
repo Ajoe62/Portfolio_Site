@@ -127,8 +127,8 @@ export default function Home() {
                 )}
             </header>
 
-            <section className="pt-8 sm:pt-20 md:pt-38 min-h-screen flex flex-col items-center justify-center p-4">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-7 text-center text-[#FFD181]">
+            <section className="pt-5 -mt-16 sm:pt-4 md:pt-8 lg:pt-12 md:-mt-0 min-h-screen flex flex-col items-center justify-center p-4">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-7 text-center text-[#FFD181]">
                     Meet your Favourite Fullstack Developer
                 </h1>
                 <div className="relative w-full max-w-[300px] h-[300px] md:max-w-[500px] md:h-[500px] mx-auto">
